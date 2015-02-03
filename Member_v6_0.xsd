@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://www.aetna.com/cmm/member/Member/v6_0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.aetna.com/cmm/member/Membership/v6_0" xmlns:bons1="http://www.aetna.com/cmm/common/Person/v6_0" xmlns:bons2="http://www.aetna.com/cmm/common/Identifier/v6_0">
+<xsd:import namespace="http://www.aetna.com/cmm/member/Membership/v6_0" schemaLocation="../Member/Membership_v6_0.xsd"/>
+<xsd:import namespace="http://www.aetna.com/cmm/common/Person/v6_0" schemaLocation="../Common/Person_v6_0.xsd"/>
+<xsd:import namespace="http://www.aetna.com/cmm/common/Identifier/v6_0" schemaLocation="../Common/Identifier_v6_0.xsd"/>
+<xsd:complexType name="Member" abstract="false" mixed="false"><!-- Modified:07/22/2014 9:53:21 PM -->
+<xsd:sequence>
+<xsd:element name="memberships" type="bons0:Membership" minOccurs="0" maxOccurs="unbounded"><!-- Modified:07/22/2014 9:53:51 PM -->
+</xsd:element>
+<xsd:element name="person" type="bons1:Person" minOccurs="1" maxOccurs="1"><!-- Modified:07/23/2014 9:47:53 AM -->
+<xsd:annotation><xsd:documentation>The person-related attributes that apply to a member.</xsd:documentation></xsd:annotation>
+</xsd:element>
+<xsd:element name="memberIdentifier" type="bons2:Identifier" minOccurs="1" maxOccurs="1"><!-- Modified:07/23/2014 9:17:50 AM -->
+<xsd:annotation><xsd:documentation>The unique identifier of a member.</xsd:documentation></xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
